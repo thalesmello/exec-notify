@@ -2,17 +2,17 @@
 
 'use strict';
 
-var command = process.argv.slice(2).join(" ");
+var command = process.argv.slice(2).join(' ');
 var spawn = require('child_process').spawn;
 var notifier = require('node-notifier');
 var start = new Date().getTime();
 
-if(command.length === 0) {
-    console.log("Usage: exec-notify COMMAND");
+if (command.length === 0) {
+    console.log('Usage: exec-notify COMMAND');
     process.exit(1);
 }
 
-var child = spawn("bash", ["-c", command], { stdio: 'inherit' });
+var child = spawn('bash', ['-c', command], { stdio: 'inherit' });
 function millisecondsToStr(milliseconds) {
     var build = [];
 
