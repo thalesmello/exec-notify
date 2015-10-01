@@ -2,12 +2,17 @@
 
 'use strict';
 
-var command = process.argv.slice(2);
+var command = process.argv.slice(2).join(" ");
 var spawn = require('child_process').spawn;
 var notifier = require('node-notifier');
 var start = new Date().getTime();
 
-var child = spawn(command[0], command.slice(1), { stdio: 'inherit' });
+if(command.length === 0) {
+    console.log("Usage: exec-notify COMMAND");
+    process.exit(1);
+}
+
+var child = spawn("bash", ["-c", command], { stdio: 'inherit' });
 function millisecondsToStr(milliseconds) {
     var build = [];
 
@@ -38,7 +43,7 @@ child.on('exit', function(code) {
     var end = new Date().getTime();
     var duration = end - start;
     var printableDuration = millisecondsToStr(duration);
-    var printableCommand = command.join(' ');
+    var printableCommand = command;
     var message = 'Executed ' + printableCommand + ' in ' + printableDuration;
 
     code = parseInt(code);
