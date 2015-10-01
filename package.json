@@ -1,0 +1,27 @@
+{
+  "name": "exec-notify",
+  "version": "0.0.1",
+  "description": "Utility to execute a command and get a warning regarding the completion status.",
+  "bin": {
+      "exec-notify": "exec_notify.js"
+  },
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thalesmello/exec-notify.git"
+  },
+  "keywords": [
+    "cli",
+    "command-line",
+    "notify",
+    "notification",
+    "command"
+  ],
+  "author": "Thales Mello",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/thalesmello/exec-notify/issues"
+  },
+  "homepage": "https://github.com/thalesmello/exec-notify#readme"
+}
