@@ -49,14 +49,14 @@ child.on('exit', function(code) {
     code = parseInt(code);
     if (code === 0) {
         notifier.notify({
-            'title': 'Deploy successfully executed',
+            'title': 'Success',
             'message': message,
             'sound': 'Submarine',
             'icon': 'success-icon.png'
         });
     } else {
         notifier.notify({
-            'title': 'Deploy failed',
+            'title': 'Failure',
             'message': message,
             'sound': 'Basso',
             'icon': 'warning-icon.png'
