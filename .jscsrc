@@ -1,0 +1,8 @@
+{
+    "preset": "google",
+    "validateIndentation": 4,
+    "esnext": true,
+    "disallowMultipleVarDecl": false,
+    "requireSpacesInsideObjectBrackets": "all",
+    "disallowSpacesInsideObjectBrackets": false
+}
