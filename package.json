@@ -1,7 +1,7 @@
 {
   "name": "exec-notify",
   "version": "0.1.0",
-  "description": "Utility to execute a command and get a warning regarding the completion status.",
+  "description": "Utility to execute a command and get a notification regarding the completion status.",
   "bin": {
     "exec-notify": "exec_notify.js"
   },
