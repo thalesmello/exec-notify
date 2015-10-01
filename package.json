@@ -3,10 +3,9 @@
   "version": "0.0.1",
   "description": "Utility to execute a command and get a warning regarding the completion status.",
   "bin": {
-      "exec-notify": "exec_notify.js"
+    "exec-notify": "exec_notify.js"
   },
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/thalesmello/exec-notify.git"
@@ -23,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/thalesmello/exec-notify/issues"
   },
-  "homepage": "https://github.com/thalesmello/exec-notify#readme"
+  "homepage": "https://github.com/thalesmello/exec-notify#readme",
+  "dependencies": {
+    "node-notifier": "^4.3.1"
+  }
 }
