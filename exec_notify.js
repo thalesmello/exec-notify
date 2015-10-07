@@ -6,6 +6,7 @@ var command = process.argv.slice(2).join(' ');
 var spawn = require('child_process').spawn;
 var notifier = require('node-notifier');
 var start = new Date().getTime();
+var path = require('path');
 
 if (command.length === 0) {
     console.log('Usage: exec-notify COMMAND');
@@ -52,14 +53,14 @@ child.on('exit', function(code) {
             'title': 'Success',
             'message': message,
             'sound': 'Submarine',
-            'icon': 'success-icon.png'
+            'icon': path.join(__dirname, 'success-icon.png')
         });
     } else {
         notifier.notify({
             'title': 'Failure',
             'message': message,
             'sound': 'Basso',
-            'icon': 'warning-icon.png'
+            'icon': path.join(__dirname, 'warning-icon.png')
         });
     }
 });
